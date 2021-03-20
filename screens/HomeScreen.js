@@ -18,12 +18,10 @@ const styles = StyleSheet.create({
   }
 })
 
-
-
 export default function HomeStack() {
     return (
         <Stack.Navigator>
-            <Stack.Screen name = "Welcome Home" component ={HomeScreen}/>
+            <Stack.Screen name = "Welcome Home" component ={HomeScreen} />
         </Stack.Navigator>
       
     );
@@ -33,36 +31,41 @@ export default function HomeStack() {
       <SafeAreaView>
       <ScrollView>
       <Text style={styles.title}>
-          International π Day
+      Thank you for downloading this app.
         </Text>
 
 
         <Card style={styles.card}>
           <Card.Content>
-            <Title>Welcome</Title>
-            <Paragraph>Thank you for downloading this app.</Paragraph>
+            <Title>International π Day</Title>
+            <Paragraph>14 March</Paragraph>
           </Card.Content>
           <Card.Cover style={{marginTop: 10, height: 200}} source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Pi_pie2.jpg/240px-Pi_pie2.jpg' }} />
         </Card>
-        </ScrollView>
-    </SafeAreaView>
-    );
-    }
-    const Homelist = () => {
-      const [expanded, setExpanded] = React.useState(true);
-    
-      const handlePress = () => setExpanded(!expanded);
-
-      return (
-        <List.Section title="Frequently Asked Questions">
+        
+         <Card style={styles.card}>
+    <Card.Content>
+      <Title>International Day of Peace</Title>
+      <Paragraph>21 September</Paragraph>
+    </Card.Content>
+    <Card.Cover source={{ marginTop: 10, height: 200}} source={{ uri: 'https://upload.wikimedia.org/wikipedia/en/c/ce/International_Peace_Day_logo.jpg' }} />
+  
+  </Card>
+  <List.Section title="Frequently Asked Questions">
           <List.Accordion
             title="What is this for?">
-            <List.Item title="We celebrate internation pie day." />
+            <List.Item title="We celebrate world international day." />
           </List.Accordion>
           <List.Accordion
             title="When will this be?">
             <List.Item title="Whenever this pandemic is over." />
           </List.Accordion>
         </List.Section>
-      );
-    };
+        </ScrollView>
+    </SafeAreaView>
+
+
+
+    );
+
+    }

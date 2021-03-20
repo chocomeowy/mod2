@@ -33,9 +33,10 @@ export default function ContactStack() {
         <View style={styles.container}>
       <Title style={styles.title}> Contacts </Title>
       <View style={styles.list}>
-        {contactsData.map((item) => {
+        {contactsData.map((item, i) => {
           return (
             <List.Item
+            key = {i}
               title={item.name}
               description={item.company, item.title}
               left={props =>
